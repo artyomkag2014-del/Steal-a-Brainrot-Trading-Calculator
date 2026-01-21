@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Brainrot Trade Builder</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Brainrot Trade Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>Brainrot Trade Builder</h1>
+
+<div class="trade">
+  <div class="panel">
+    <h2>You</h2>
+    <div class="add-bar">
+      <select id="ySelect"></select>
+      <input id="yValue" readonly placeholder="Base">
+      <input id="yDemand" readonly placeholder="Demand">
+      <button onclick="addItem('you')">+</button>
+    </div>
+    <div id="you" class="items empty"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Them</h2>
+    <div class="add-bar">
+      <select id="tSelect"></select>
+      <input id="tValue" readonly placeholder="Base">
+      <input id="tDemand" readonly placeholder="Demand">
+      <button onclick="addItem('them')">+</button>
+    </div>
+    <div id="them" class="items empty"></div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-grid">
+    <div>You<br><span id="yTotal">0</span></div>
+    <div>Them<br><span id="tTotal">0</span></div>
+    <div>Diff<br><span id="diff">0</span></div>
+    <div id="result" class="result fair">ADD ITEMS</div>
+    <button onclick="saveTrade()">Save</button>
+    <button onclick="loadTrade()">Load</button>
+    <button onclick="clearTrade()">Clear</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
