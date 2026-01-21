@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Segoe UI, Arial, sans-serif;
+  background: radial-gradient(circle at top, #1b1f44, #0a0c1c);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.trade{
+  flex:1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  padding:16px;
+}
+
+.panel{
+  background:rgba(255,255,255,.06);
+  border-radius:20px;
+  padding:14px;
+}
+
+.add-bar{
+  display:grid;
+  grid-template-columns:1fr 90px 90px 42px;
+  gap:8px;
+  margin-bottom:12px;
+}
+
+input,select,button{
+  height:40px;
+  border:none;
+  border-radius:10px;
+  padding:6px 10px;
+  font-size:14px;
+}
+
+input[readonly]{
+  background:#2a2e55;
+  color:#ccc;
+}
+
+button{
+  background:#7f7cff;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.items{
+  min-height:200px;
+  padding:12px;
+  border-radius:16px;
+  background:rgba(0,0,0,.25);
+}
+
+.items.empty::after{
+  content:"No brainrots added";
+  opacity:.4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+}
+
+.item{
+  background:#20245a;
+  border-radius:14px;
+  padding:10px;
+  margin-bottom:10px;
+}
+
+.item-title {
+  font-weight: 700;
+}
+
+.item-meta {
+  font-size: 12px;
+  opacity: .7;
+  margin-bottom: 6px;
+}
+
+.group-title{
+  font-size:12px;
+  opacity:.6;
+  margin:6px 0 4px;
+}
+
+.multi{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.multi button{
+  background:#343a80;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:12px;
+}
+
+.multi button.active{
+  background:#ffd966;
+  color:#000;
+}
+
+.footer{
+  background:#0b0d1f;
+  border-top:2px solid #2e3370;
+  padding:10px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr) repeat(3,60px);
+  gap:10px;
+  align-items:center;
+  text-align:center;
+}
+
+.result {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.win {
+  color: #4cff6a;
+}
+
+.lose {
+  color: #ff4c4c;
+}
+
+.fair {
+  color: #ffd966;
+}
